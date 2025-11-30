@@ -10,18 +10,9 @@
 Option Strict On
 Option Explicit On
 
-Namespace ProyectoPrestamoHerramientas
+Namespace Sistema.Administracion
 
-    Partial Public Class SiteMaster
-
-        '''<summary>
-        '''Control HeadContent.
-        '''</summary>
-        '''<remarks>
-        '''Campo generado automáticamente.
-        '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        '''</remarks>
-        Protected WithEvents HeadContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Partial Public Class EditarHerramienta
 
         '''<summary>
         '''Control form1.
@@ -33,39 +24,66 @@ Namespace ProyectoPrestamoHerramientas
         Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
         '''<summary>
-        '''Control MenuItems.
+        '''Control hfID.
         '''</summary>
         '''<remarks>
         '''Campo generado automáticamente.
         '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         '''</remarks>
-        Protected WithEvents MenuItems As Global.System.Web.UI.WebControls.PlaceHolder
+        Protected WithEvents hfID As Global.System.Web.UI.WebControls.HiddenField
 
         '''<summary>
-        '''Control lblUser.
+        '''Control txtNombre.
         '''</summary>
         '''<remarks>
         '''Campo generado automáticamente.
         '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         '''</remarks>
-        Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
+        Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
 
         '''<summary>
-        '''Control lnkLogout.
+        '''Control txtCodigo.
         '''</summary>
         '''<remarks>
         '''Campo generado automáticamente.
         '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         '''</remarks>
-        Protected WithEvents lnkLogout As Global.System.Web.UI.WebControls.LinkButton
+        Protected WithEvents txtCodigo As Global.System.Web.UI.WebControls.TextBox
 
         '''<summary>
-        '''Control MainContent.
+        '''Control txtUbicacion.
         '''</summary>
         '''<remarks>
         '''Campo generado automáticamente.
         '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         '''</remarks>
-        Protected WithEvents MainContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
+        Protected WithEvents txtUbicacion As Global.System.Web.UI.WebControls.TextBox
+
+        '''<summary>
+        '''Control ddlEstado.
+        '''</summary>
+        '''<remarks>
+        '''Campo generado automáticamente.
+        '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        '''</remarks>
+        Protected WithEvents ddlEstado As Global.System.Web.UI.WebControls.DropDownList
+
+        '''<summary>
+        '''Control txtDescripcion.
+        '''</summary>
+        '''<remarks>
+        '''Campo generado automáticamente.
+        '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        '''</remarks>
+        Protected WithEvents txtDescripcion As Global.System.Web.UI.WebControls.TextBox
+
+        '''<summary>
+        '''Control btnGuardar.
+        '''</summary>
+        '''<remarks>
+        '''Campo generado automáticamente.
+        '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        '''</remarks>
+        Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
     End Class
 End Namespace

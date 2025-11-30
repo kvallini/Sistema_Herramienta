@@ -11,41 +11,32 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Account_Login
+Partial Public Class Empleado_HerramientasDisponibles
 
     '''<summary>
-    '''Control lblMsg.
+    '''Control Content1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Content1 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control txtEmail.
+    '''Control gvDisponibles.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents gvDisponibles As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control txtPassword.
+    '''Control btnSolicitar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control btnLogin.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnSolicitar As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 End Class

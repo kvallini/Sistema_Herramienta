@@ -14,7 +14,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Sistema_Herramienta</RootNamespace>
     <AssemblyName>Sistema_Herramienta</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,13 +49,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -78,6 +77,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -1821,9 +1821,187 @@
     <Content Include="Content\vendor\jquery\jquery.slim.js" />
     <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Login.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="Utils\SwalUtils.vb" />
+    <Content Include="Admin.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="obj\Debug\Sistema_Herramienta.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll" />
+    <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.pdb" />
+    <Content Include="packages\bootstrap.5.2.3\bootstrap.png" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.esm.js" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.js" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.rtl.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.rtl.min.css" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.bundle.js" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.esm.js" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.esm.min.js" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.min.js" />
+    <None Include="packages\jQuery.3.7.0\Content\Scripts\jquery-3.7.0-vsdoc.js" />
+    <Content Include="packages\jQuery.3.7.0\Content\Scripts\jquery-3.7.0.js" />
+    <Content Include="packages\jQuery.3.7.0\Content\Scripts\jquery-3.7.0.min.js" />
+    <Content Include="packages\jQuery.3.7.0\Content\Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="packages\jQuery.3.7.0\Content\Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="packages\jQuery.3.7.0\Tools\jquery-3.7.0.intellisense.js" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net40\es\Microsoft.AspNet.FriendlyUrls.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net40\es\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net40\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net40\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\es\Microsoft.AspNet.FriendlyUrls.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\es\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2\lib\net40\es\Microsoft.AspNet.FriendlyUrls.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2\lib\net40\es\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2\lib\net45\es\Microsoft.AspNet.FriendlyUrls.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2\lib\net45\es\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\content\Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\DetailsView.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\Focus.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\GridView.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\Menu.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\MenuStandards.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\SmartNav.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\TreeView.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\WebForms.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\WebParts.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\content\Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\es\System.Web.Optimization.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\system.web.optimization.xml" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.es.1.1.3\lib\net40\es\System.Web.Optimization.resources.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Globalization.Calendars.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.ZipFile.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Sockets.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.2.0.0\NET.icon.png" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.2.0.0\NET_Library_EULA_ENU.txt" />
+    <Content Include="packages\Modernizr.2.8.3\Content\Scripts\modernizr-2.8.3.js" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net6.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\net6.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\lib\netstandard2.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\packageIcon.png" />
+    <Content Include="packages\WebGrease.1.6.0\lib\WebGrease.dll" />
+    <Content Include="packages\WebGrease.1.6.0\tools\WG.EXE" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -1852,9 +2030,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Administracion\GestionHerramientas.aspx" />
-    <Content Include="HerramientasDisponibles.aspx" />
-    <Content Include="Administracion\Solicitudes.aspx" />
+    <Content Include="Herramientas.aspx" />
     <Content Include="Administracion\Usuarios.aspx" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js.map" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
@@ -2005,6 +2181,129 @@
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\vendor\jquery\jquery.min.map" />
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Sistema_Herramienta.vbproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\Sistema_Herramienta.vbproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Sistema_Herramienta.vbproj.GenerateResource.cache" />
+    <Content Include="packages\Antlr.3.5.0.2\.signature.p7s" />
+    <Content Include="packages\Antlr.3.5.0.2\Antlr.3.5.0.2.nupkg" />
+    <Content Include="packages\bootstrap.5.2.3\.signature.p7s" />
+    <Content Include="packages\bootstrap.5.2.3\bootstrap.5.2.3.nupkg" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.esm.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.rtl.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Content\bootstrap.rtl.min.css.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.esm.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.js.map" />
+    <Content Include="packages\bootstrap.5.2.3\content\Scripts\bootstrap.min.js.map" />
+    <Content Include="packages\jQuery.3.7.0\.signature.p7s" />
+    <Content Include="packages\jQuery.3.7.0\Content\Scripts\jquery-3.7.0.min.map" />
+    <Content Include="packages\jQuery.3.7.0\Content\Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="packages\jQuery.3.7.0\jQuery.3.7.0.nupkg" />
+    <Content Include="packages\jQuery.3.7.0\Tools\common.ps1" />
+    <Content Include="packages\jQuery.3.7.0\Tools\install.ps1" />
+    <Content Include="packages\jQuery.3.7.0\Tools\uninstall.ps1" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\Microsoft.AspNet.FriendlyUrls.Core.1.0.2.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2\Microsoft.AspNet.FriendlyUrls.Core.es.1.0.2.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\Microsoft.AspNet.ScriptManager.WebForms.5.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\Microsoft.AspNet.Web.Optimization.1.1.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.es.1.1.3\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.es.1.1.3\Microsoft.AspNet.Web.Optimization.es.1.1.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.2.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.2.0.0\Microsoft.Web.Infrastructure.2.0.0.nupkg" />
+    <Content Include="packages\Modernizr.2.8.3\.signature.p7s" />
+    <Content Include="packages\Modernizr.2.8.3\Modernizr.2.8.3.nupkg" />
+    <Content Include="packages\Modernizr.2.8.3\Tools\common.ps1" />
+    <Content Include="packages\Modernizr.2.8.3\Tools\install.ps1" />
+    <Content Include="packages\Modernizr.2.8.3\Tools\uninstall.ps1" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\.signature.p7s" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\LICENSE.md" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\Newtonsoft.Json.13.0.3.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.13.0.3\README.md" />
+    <Content Include="packages\WebGrease.1.6.0\.signature.p7s" />
+    <Content Include="packages\WebGrease.1.6.0\WebGrease.1.6.0.nupkg" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -2038,36 +2337,20 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administracion\GestionHerramientas.aspx.designer.vb">
-      <DependentUpon>GestionHerramientas.aspx</DependentUpon>
+    <Compile Include="DB\HerramientaDB.vb" />
+    <Compile Include="DB\PrestamoDB.vb" />
+    <Compile Include="DB\UsuarioDB.vb" />
+    <Compile Include="Herramientas.aspx.designer.vb">
+      <DependentUpon>Herramientas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\GestionHerramientas.aspx.vb">
-      <DependentUpon>GestionHerramientas.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HerramientasDisponibles.aspx.designer.vb">
-      <DependentUpon>HerramientasDisponibles.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HerramientasDisponibles.aspx.vb">
-      <DependentUpon>HerramientasDisponibles.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Administracion\Solicitudes.aspx.designer.vb">
-      <DependentUpon>Solicitudes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Administracion\Solicitudes.aspx.vb">
-      <DependentUpon>Solicitudes.aspx</DependentUpon>
+    <Compile Include="Herramientas.aspx.vb">
+      <DependentUpon>Herramientas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Administracion\Usuarios.aspx.designer.vb">
@@ -2077,13 +2360,13 @@
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Content Include="App_Code\DatabaseHelper.vb" />
-    <Content Include="App_Code\Simple3Des.vb" />
-    <Content Include="App_Code\SwalUtils.vb" />
-    <Content Include="App_Code\ConexionDB.vb" />
-    <Content Include="App_Code\UsuarioDb.vb" />
-    <Content Include="App_Code\HerramientaDB.vb" />
-    <Content Include="App_Code\PrestamoDB.vb" />
+    <Compile Include="DB\DatabaseHelper.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Content Include="Utils\Simple3Des.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DB\ConexionDB.vb" />
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="About.aspx.designer.vb">
@@ -2100,23 +2383,30 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.vb">
+    <Compile Include="Admin.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.designer.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.designer.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Herranientas.vb" />
-    <Compile Include="Models\Prestamo.vb" />
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\Herramienta.vb" />
     <Compile Include="Models\Usuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
       <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
@@ -2132,26 +2422,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Site.Master.designer.vb">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Master.vb">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.vb" />
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.vb">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -2161,6 +2438,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Sistema_Herramienta.Resources.resources" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -2172,20 +2450,22 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Site.Master" />
-    <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

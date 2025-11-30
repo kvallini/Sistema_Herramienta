@@ -15,12 +15,13 @@
         Public Sub ShowSwalError(page As System.Web.UI.Page, title As String, message As String)
             ShowSwalMessage(page, title, message, "error")
         End Sub
+
         Public Sub ShowSwalError(page As System.Web.UI.Page, message As String)
             ShowSwalMessage(page, "Error", message, "error")
         End Sub
+
         Public Sub ShowSwal(page As System.Web.UI.Page, title As String, Optional message As String = "", Optional icon As String = "success")
             ShowSwalMessage(page, title, message, icon)
         End Sub
     End Module
 End Namespace
-
